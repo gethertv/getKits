@@ -1,0 +1,9 @@
+name: getKits
+version: '${project.version}'
+main: dev.gether.getkits.GetKits
+api-version: '1.16'
+commands:
+  getkit:
+    aliases:
+      - kit
+      - kits
