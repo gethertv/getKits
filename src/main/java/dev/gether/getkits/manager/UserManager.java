@@ -13,7 +13,7 @@ import java.util.UUID;
 public class UserManager {
 
     private final GetKits plugin;
-    private final KitManager kitManager;
+    private KitManager kitManager;
     private HashMap<UUID, User> userData = new HashMap<>();
     private HashMap<UUID, AdminUser> adminEditKit = new HashMap<>();
 
@@ -37,6 +37,10 @@ public class UserManager {
 
     public HashMap<UUID, AdminUser> getAdminEditKit() {
         return adminEditKit;
+    }
+
+    public void setKitManager(KitManager kitManager) {
+        this.kitManager = kitManager;
     }
 
     public HashMap<UUID, User> getUserData() {

@@ -122,7 +122,7 @@ public final class GetKits extends JavaPlugin {
 
         }
         kitManager = new KitManager(this);
-        userManager = new UserManager(this, kitManager);
+        userManager.setKitManager(kitManager);
 
     }
     public static GetKits getInstance() {

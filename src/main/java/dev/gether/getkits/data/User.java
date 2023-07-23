@@ -77,6 +77,9 @@ public class User {
     public boolean hasCooldown(Kit kit)
     {
         Long cooldownTime = cooldown.get(kit.getKeyName());
+        if(cooldownTime==null)
+            cooldownTime = 0L;
+
         long timeToRecived = cooldownTime + kit.getCooldown() * 1000;
         if(timeToRecived<=System.currentTimeMillis())
             return false;
