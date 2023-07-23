@@ -1,17 +1,18 @@
-package dev.gether.getboostdrop.utils;
+package dev.gether.getkits.utils;
 
-import dev.gether.getboostdrop.GetBoostDrop;
+
+import dev.gether.getkits.GetKits;
 
 import java.text.DecimalFormat;
 
 public class Timer {
 
     // "{d}{h}{m}{s}"
-    static String format = GetBoostDrop.getInstance().getConfig().getString("format");
-    static String day = GetBoostDrop.getInstance().getConfig().getString("day");
-    static String hour = GetBoostDrop.getInstance().getConfig().getString("hour");
-    static String min = GetBoostDrop.getInstance().getConfig().getString("min");
-    static String sec = GetBoostDrop.getInstance().getConfig().getString("sec");
+    static String format = GetKits.getInstance().getConfig().getString("format");
+    static String day = GetKits.getInstance().getConfig().getString("day");
+    static String hour = GetKits.getInstance().getConfig().getString("hour");
+    static String min = GetKits.getInstance().getConfig().getString("min");
+    static String sec = GetKits.getInstance().getConfig().getString("sec");
 
     static DecimalFormat df = new DecimalFormat("00");
     public static String getTime(int second)

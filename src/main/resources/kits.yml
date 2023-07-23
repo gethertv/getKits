@@ -1,0 +1,41 @@
+
+kits:
+  gracz:
+    name: "&aGracz"
+    # czas w sekundach
+    cooldown: 30
+    permission: kit.gracz
+    inv:
+      title: "&0Zestaw gracza"
+      size: 27
+      backgrounds:
+        '1':
+          material: BLACK_STAINED_GLASS_PANE
+          displayname: "&7"
+          lore: []
+          slots: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+    item:
+      slot: 10
+      cooldown:
+        material: BARRIER
+        displayname: "&aZestaw gracza"
+        lore:
+          - "&7"
+          - "&fMusisz odczekac &c{time}"
+          - "&7"
+      available:
+        material: STONE
+        displayname: "&aZestaw gracza"
+        lore:
+          - "&7"
+          - "&fKliknij, aby odebrac zestaw!"
+          - "&7"
+      no-available:
+        material: BARRIER
+        displayname: "&aZestaw gracza"
+        lore:
+          - "&7"
+          - "&cBrak uprawnien!"
+          - "&7"
+    items: {}
+

@@ -1,4 +1,4 @@
-package dev.gether.getboxsettings.utils;
+package dev.gether.getkits.utils;
 
 import org.bukkit.ChatColor;
 

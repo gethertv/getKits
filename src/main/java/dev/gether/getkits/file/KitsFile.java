@@ -1,22 +1,22 @@
-package dev.gether.getboxsettings.file;
+package dev.gether.getkits.file;
 
-import dev.gether.getboxsettings.GetBoxSettings;
+import dev.gether.getkits.GetKits;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
 
-public class ChangeFile {
+public class KitsFile {
 
     private static File file;
     private static FileConfiguration config;
 
     public static void setup() {
-        file = new File(GetBoxSettings.getInstance().getDataFolder(), "change.yml");
+        file = new File(GetKits.getInstance().getDataFolder(), "kits.yml");
         if (!file.exists()) {
             file.getParentFile().mkdirs();
-            GetBoxSettings.getInstance().saveResource("change.yml", false);
+            GetKits.getInstance().saveResource("kits.yml", false);
         }
 
         config = new YamlConfiguration();
