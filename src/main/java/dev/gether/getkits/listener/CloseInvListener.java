@@ -36,7 +36,12 @@ public class CloseInvListener implements Listener {
         for (int i = 0; i < inv.getSize(); i++) {
             ItemStack item = inv.getItem(i);
             if(item==null || item.getType()== Material.AIR)
+            {
+                if(config.isSet("kits."+adminUser.getKey()+".items."+i))
+                    config.set("kits."+adminUser.getKey()+".items."+i, null);
+
                 continue;
+            }
 
             config.set("kits."+adminUser.getKey()+".items."+i, item);
         }

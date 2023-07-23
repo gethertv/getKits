@@ -83,7 +83,6 @@ public class SQLite {
     public void loadUser(Player player) {
         if(!playerExists(player.getUniqueId()))
         {
-            createUser(player);
             plugin.getUserManager().getUserData().put(player.getUniqueId(), new User());
             return;
         }
@@ -137,12 +136,6 @@ public class SQLite {
         }
 
     }
-
-    public void createUser(Player player)
-    {
-        update("INSERT INTO "+table+" (uuid, username) VALUES ('"+player.getUniqueId()+"', '"+player.getName()+"')");
-    }
-
 
     public boolean playerExists(UUID uuid) {
         return (getPlayerID(uuid) != 0);
