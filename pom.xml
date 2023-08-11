@@ -6,7 +6,7 @@
 
     <groupId>dev.gether</groupId>
     <artifactId>getKits</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
 
     <name>getKits</name>

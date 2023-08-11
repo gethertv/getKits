@@ -22,6 +22,6 @@ public class AutoSave extends BukkitRunnable {
                     plugin.getSqLite().updateUser(player);
                 }
             }
-        };
+        }.runTaskAsynchronously(plugin);
     }
 }

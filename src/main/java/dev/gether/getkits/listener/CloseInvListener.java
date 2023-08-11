@@ -33,6 +33,9 @@ public class CloseInvListener implements Listener {
 
         FileConfiguration config = KitsFile.getConfig();
         Inventory inv = adminUser.getInventory();
+        if(!event.getInventory().equals(inv))
+            return;
+
         for (int i = 0; i < inv.getSize(); i++) {
             ItemStack item = inv.getItem(i);
             if(item==null || item.getType()== Material.AIR)
